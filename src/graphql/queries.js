@@ -20,10 +20,9 @@ export const getPrediction = /* GraphQL */ `
 export const listPredictions = /* GraphQL */ `
   query ListPredictions(
     $filter: ModelPredictionFilterInput
-    $limit: Int
     $nextToken: String
   ) {
-    listPredictions(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listPredictions(filter: $filter, limit: 1000, nextToken: $nextToken) {
       items {
         ID
         Author
@@ -32,9 +31,6 @@ export const listPredictions = /* GraphQL */ `
         Prediction
         status
         Year
-        id
-        createdAt
-        updatedAt
       }
       nextToken
     }
