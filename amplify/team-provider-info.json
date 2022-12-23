@@ -1,0 +1,15 @@
+{
+  "gtiprod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-gti-gtiprod-205649-authRole",
+      "UnauthRoleArn": "arn:aws:iam::617529855217:role/amplify-gti-gtiprod-205649-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::617529855217:role/amplify-gti-gtiprod-205649-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-gti-gtiprod-205649-deployment",
+      "UnauthRoleName": "amplify-gti-gtiprod-205649-unauthRole",
+      "StackName": "amplify-gti-gtiprod-205649",
+      "StackId": "arn:aws:cloudformation:eu-west-2:617529855217:stack/amplify-gti-gtiprod-205649/52723e40-8304-11ed-bc7c-0af30e681a10",
+      "AmplifyAppId": "d3iny06orcvh0o"
+    }
+  }
+}
