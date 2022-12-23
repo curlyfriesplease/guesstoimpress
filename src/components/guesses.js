@@ -25,11 +25,11 @@ const StatusCorrect = () => <div className="statusCorrect status">CORRECT</div>;
 const IndividualGuess = ({ guess }) => {
   const statusText = (num) => {
     switch (num) {
-      case 1:
+      case "1":
         return <StatusPending />;
-      case 2:
+      case "2":
         return <StatusIncorrect />;
-      case 3:
+      case "3":
         return <StatusPartial />;
       default:
         return <StatusCorrect />;
