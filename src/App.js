@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import { Amplify, API, graphqlOperation } from 'aws-amplify';
+import { listPredictions } from './graphql/queries';
+
+import { fetchAllPredictionsByYear } from './components/queries';
+import awsExports from './aws-exports';
+import { Header } from './components/header';
+import { ListDiv } from './components/guesses';
+Amplify.configure(awsExports);
 
 function App() {
+  const [predictions, setPredictions] = useState([]);
+
+  useEffect(() => {
+    const currentYear = new Date().getFullYear();
+    fetchAllPredictionsByYear(currentYear, setPredictions);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Main dropShadow1">
+        <Header setPredictions={setPredictions} />
+        {predictions.length > 0 && <ListDiv predictionData={predictions} />}
+      </div>
     </div>
   );
 }

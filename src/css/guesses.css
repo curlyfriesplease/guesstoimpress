@@ -1,0 +1,172 @@
+.listDiv {
+  width: 92%;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+}
+
+.individualGuess {
+  display: grid;
+  grid-template-areas:
+    'cat aut tex yea sta'
+    'cat aut inf yea sta';
+  min-height: 45px;
+  grid-template-columns: 15% 10% 60% 6% 8%;
+  grid-template-rows: auto auto;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.guessCategory {
+  grid-area: cat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guessAuthor {
+  grid-area: aut;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.guessText {
+  grid-area: tex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px 1px 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.guessYear {
+  grid-area: yea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 5px 2px 5px;
+  max-height: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 0 5px darkgrey;
+}
+
+.guessStatus {
+  grid-area: sta;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: 'MODERN TYPEWRITER', sans-serif;
+}
+
+.guessInfo {
+  grid-area: inf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-style: oblique;
+  font-weight: 600;
+  color: #a700b6;
+  padding-top: 7px;
+}
+
+.guessButton {
+  transition: 0.3s;
+  font-family: 'MODERN TYPEWRITER', sans-serif;
+}
+
+.guessButton:hover {
+  box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  border-radius: 30px;
+}
+
+.guessButton:active {
+  box-shadow: inset -8px -8px 8px 0 rgba(255, 255, 255, 0.7),
+    inset 8px 8px 8px 0 rgba(174, 174, 192, 0.897);
+  border-radius: 30px;
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 800px) {
+}
+
+.statusPending {
+  color: white;
+  font-size: 15px;
+  background-image: linear-gradient(
+    to right,
+    #005c97 0%,
+    #363795 51%,
+    #005c97 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 5px darkgrey;
+}
+
+.statusIncorrect {
+  color: white;
+  font-size: 15px;
+  background-image: linear-gradient(
+    to right,
+    #e53935 0%,
+    #e35d5b 51%,
+    #e53935 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 5px darkgrey;
+}
+
+.statusPartial {
+  background-image: linear-gradient(
+    to right,
+    #f7971e 0%,
+    #ffd200 51%,
+    #f7971e 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 5px darkgrey;
+}
+
+.statusCorrect {
+  color: white;
+  background-image: linear-gradient(
+    110.1deg,
+    rgba(34, 126, 34, 1) 2.9%,
+    rgba(168, 251, 60, 1) 90.3%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 5px darkgrey;
+}
+
+.status {
+  font-size: 14px;
+  padding: 5px 9px 5px 9px;
+  border-radius: 15px;
+  border: thick double #c3e9f8;
+}
+
+.status:hover {
+  background-position: right center;
+}

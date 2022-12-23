@@ -1,0 +1,131 @@
+.DEATH {
+  background-image: linear-gradient(
+    to right,
+    #000000 0%,
+    #434343 51%,
+    #000000 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+}
+
+.ECONOMY {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(48, 207, 208, 1) 11.2%,
+    rgba(51, 8, 103, 1) 92.5%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.ENVIRONMENT {
+  background-image: linear-gradient(
+    to right,
+    #56ab2f 0%,
+    #a8e063 51%,
+    #56ab2f 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.POLITICS {
+  background-image: linear-gradient(
+    to right,
+    #e55d87 0%,
+    #5fc3e4 51%,
+    #e55d87 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.SPORTS {
+  background-image: linear-gradient(
+    to right,
+    #ee0979 0%,
+    #ff6a00 51%,
+    #ee0979 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.MEDIA {
+  background-image: linear-gradient(
+    to right,
+    #fc354c 0%,
+    #0abfbc 51%,
+    #fc354c 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.SCIENCE {
+  background-image: linear-gradient(
+    to right,
+    #1a2980 0%,
+    #26d0ce 51%,
+    #1a2980 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.CELEBRITY {
+  background-image: linear-gradient(
+    to right,
+    #ff4e50 0%,
+    #f9d423 51%,
+    #ff4e50 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.VIRUS {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.MISC {
+  background-image: linear-gradient(
+    to right,
+    #fc00ff 0%,
+    #00dbde 51%,
+    #fc00ff 100%
+  );
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.category {
+  grid-area: cat;
+  max-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-color: #30bb36;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.category:hover {
+  background-position: right center;
+}
+
+.category span {
+  padding-right: 5px;
+}

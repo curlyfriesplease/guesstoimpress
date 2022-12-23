@@ -1,38 +1,58 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #f0f0f3;
+  width: 100vw !important;
+  height: 100vw !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Main {
+  margin-top: 50px;
+  width: 90vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  /* width: 95vw; */
+  background: #f0f0f3;
+  /* flex-grow: 1; */
+  padding-bottom: 50px;
+  font-family: 'Manrope', sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dropShadow1 {
+  -moz-box-shadow: -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  -webkit-box-shadow: -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  box-shadow: -8px -8px 24px 0 #fff, 8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  border-radius: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.dropShadow2 {
+  -moz-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  -webkit-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  border-radius: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonActiveSelection {
+  -moz-box-shadow: inset -8px -8px 8px 0 rgba(255, 255, 255, 0.7),
+    inset 8px 8px 8px 0 rgba(174, 174, 192, 0.2);
+  -webkit-box-shadow: inset -8px -8px 8px 0 rgba(255, 255, 255, 0.7),
+    inset 8px 8px 8px 0 rgba(174, 174, 192, 0.2);
+  box-shadow: inset -8px -8px 8px 0 rgba(255, 255, 255, 0.7),
+    inset 8px 8px 8px 0 rgba(174, 174, 192, 0.2);
+  border-radius: 30px;
 }
