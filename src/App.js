@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <div className="Main dropShadow1">
         <Header setPredictions={setPredictions} />
-        {predictions.length > 0 && <ListDiv predictionData={predictions} />}
+        {predictions.length > 0 && <ListDiv predictionData={predictions} setPredictions={setPredictions} />}
       </div>
     </div>
   );
