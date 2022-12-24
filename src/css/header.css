@@ -1,6 +1,6 @@
 .headerDiv {
   margin: 30px 0 30px 0;
-  width: 60vw;
+  width: 80vw;
   height: fit-content;
 }
 
@@ -37,10 +37,13 @@
   border: none;
   flex-grow: 0.6;
   max-width: 20%;
-  padding: 10px 30px 10px 30px;
   transition: 0.3s;
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
+  align-content: center;
+  width: fit-content;
+  vertical-align: middle;
+  padding: 10px 0 10px 0;
 }
 
 .menuButton:hover {
@@ -54,4 +57,17 @@
   box-shadow: inset -8px -8px 8px 0 rgba(255, 255, 255, 0.7),
     inset 8px 8px 8px 0 rgba(174, 174, 192, 0.897);
   border-radius: 30px;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .title {
+    font-size: 45px;
+    font-weight: 800;
+  }
+
+  .menuItems {
+    flex-wrap: wrap;
+  }
+
 }

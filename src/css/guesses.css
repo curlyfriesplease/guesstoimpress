@@ -38,9 +38,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 1000;
+color: #005c97;
   font-size: 18px;
   cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
 }
 
 .guessText {
@@ -61,10 +63,10 @@
   padding: 2px 5px 2px 5px;
   max-height: 20px;
   border-radius: 10px;
-  width: fit-content;
+  width: auto;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0 0 5px darkgrey;
+
 }
 
 .guessStatus {
@@ -84,9 +86,9 @@
   justify-content: center;
   font-size: 14px;
   font-style: oblique;
-  font-weight: 600;
+  font-weight: 800;
   color: #a700b6;
-  padding-top: 7px;
+  padding: 7px 10px 4px 10px;
 }
 
 .guessButton {
@@ -172,4 +174,31 @@
 
 .status:hover {
   background-position: right center;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  
+  .individualGuess {
+    grid-template-areas:
+      '. aut . yea .'
+      'tex tex tex tex text'
+      'inf inf inf inf inf'
+      '. cat . sta .';
+      grid-template-columns: 5% 40% 10% 40% 5%;
+      grid-template-rows: auto auto auto auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  .guessText {
+    padding-top: 10px;
+    padding-bottom: 10px;;
+  }
+
+  .guessInfo {
+    padding-bottom: 5px;
+  }
+
 }

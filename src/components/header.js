@@ -15,8 +15,9 @@ const MenuItems = ({ setPredictions }) => (
     <button
       className="menuButton"
       onClick={() => fetchAllPredictionsByYear('2023', setPredictions)}
-    >
+    ><div className='buttonText'>
       2023
+      </div>
     </button>
     <button
       className="menuButton"
@@ -30,6 +31,5 @@ const MenuItems = ({ setPredictions }) => (
     >
       2021
     </button>
-    <button className="menuButton">RULES</button>
   </div>
 );
