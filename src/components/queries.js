@@ -13,7 +13,9 @@ export async function fetchAllPredictionsByYear(queryYear, setPredictions) {
       })
     );
     const predictions = predictionData.data.listPredictions.items;
-    const sortedPredictionsByName = predictions.sort((a, b) => (a.Author > b.Author) ? -1 : 1)
+    const sortedPredictionsByName = predictions.sort((a, b) =>
+      a.Author > b.Author ? -1 : 1
+    );
     console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
     console.dir(predictions);
     setPredictions(sortedPredictionsByName);
@@ -35,7 +37,36 @@ export async function fetchAllPredictionsByStatus(queryStatus, setPredictions) {
       })
     );
     const predictions = predictionData.data.listPredictions.items;
-    const sortedPredictionsByYear = predictions.sort((a, b) => (a.Year > b.Year) ? 1 : -1)
+    const sortedPredictionsByYear = predictions.sort((a, b) =>
+      a.Year > b.Year ? 1 : -1
+    );
+    console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
+    console.dir(predictions);
+    setPredictions(sortedPredictionsByYear);
+  } catch (err) {
+    console.log('error fetching predictions:');
+    console.log(err);
+  }
+}
+
+export async function fetchAllPredictionsByCategory(
+  queryCategory,
+  setPredictions
+) {
+  try {
+    const predictionData = await API.graphql(
+      graphqlOperation(listPredictions, {
+        filter: {
+          category: {
+            eq: queryCategory,
+          },
+        },
+      })
+    );
+    const predictions = predictionData.data.listPredictions.items;
+    const sortedPredictionsByYear = predictions.sort((a, b) =>
+      a.Year > b.Year ? -1 : 1
+    );
     console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
     console.dir(predictions);
     setPredictions(sortedPredictionsByYear);
@@ -57,32 +88,39 @@ export async function fetchAllPredictionsByAuthor(queryAuthor, setPredictions) {
       })
     );
     const predictions = predictionData.data.listPredictions.items;
-    const sortedPredictionsByYear = predictions.sort((a, b) => (a.Year > b.Year) ? -1 : 1)
+    const sortedPredictionsByName = predictions.sort((a, b) =>
+      a.Author > b.Author ? -1 : 1
+    );
     console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
     console.dir(predictions);
-    setPredictions(sortedPredictionsByYear);
+    setPredictions(sortedPredictionsByName);
   } catch (err) {
     console.log('error fetching predictions:');
     console.log(err);
   }
 }
 
-export async function fetchAllPredictionsByCategory(queryCategory, setPredictions) {
+export async function fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate(
+  queryAuthor,
+  queryYear
+) {
   try {
     const predictionData = await API.graphql(
       graphqlOperation(listPredictions, {
         filter: {
-          category: {
-            eq: queryCategory,
+          Year: {
+            eq: queryYear,
+          },
+          Author: {
+            eq: queryAuthor,
           },
         },
       })
     );
     const predictions = predictionData.data.listPredictions.items;
-    const sortedPredictionsByYear = predictions.sort((a, b) => (a.Year > b.Year) ? -1 : 1)
-    console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
+    console.log('👻👻👻 one set of predictions');
     console.dir(predictions);
-    setPredictions(sortedPredictionsByYear);
+    return predictions;
   } catch (err) {
     console.log('error fetching predictions:');
     console.log(err);

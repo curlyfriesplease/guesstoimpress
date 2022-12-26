@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   background: #f0f0f3;
-  width: 100vw !important;
-  height: 100vw !important;
+  /* width: 100vw !important;
+  height: 100vw !important; */
 }
 
 .Main {
@@ -58,8 +58,7 @@
 }
 
 @media only screen and (max-width: 800px) {
-.Main {
-  margin-top: 10px;
-}
-
+  .Main {
+    margin-top: 10px;
+  }
 }
