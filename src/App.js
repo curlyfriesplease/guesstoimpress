@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Amplify, API, graphqlOperation } from 'aws-amplify';
-import { listPredictions } from './graphql/queries';
+import { Amplify } from 'aws-amplify';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import awsExports from './aws-exports';
 
@@ -33,7 +32,10 @@ function App() {
           <Route path="query" exact element={<NoQueryMessage />} />
           <Route
             path="query/*"
-            element={<Query setPredictions={setPredictions} />}
+            element={<Query 
+              setPredictions={setPredictions} 
+              predictionData={predictions} 
+              />}
           />
           <Route path="rules" element={<Rules />} />
           <Route path="winners" element={<Winners />} />
