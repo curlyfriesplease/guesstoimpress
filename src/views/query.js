@@ -4,30 +4,34 @@ import { fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate } from '../compon
 import { ListDiv } from '../components/guesses'
 
 export const NoQueryMessage = () => (
-      <>
-        <h3>Custom queries must be written in this format:</h3>
-        <h1>/query/year=2021authors=JON&ELEANOR&DAN</h1>
-        <h3>1️⃣ Must start with year=XXXX</h3>
-        <h3>2️⃣ Followed by authors=AAA&BBB&CCC</h3>
-        <h3>3️⃣ Authors must be separated by an '&' symbol, and must be in caps</h3>
-      </>
-    )
+  <>
+    <h3>Custom queries must be written in this format:</h3>
+    <h1>/query/year=2021authors=JON&ELEANOR&DAN</h1>
+    <h3>1️⃣ Must start with year=XXXX</h3>
+    <h3>2️⃣ Followed by authors=AAA&BBB&CCC</h3>
+    <h3>3️⃣ Authors must be separated by an '&' symbol, and must be in caps</h3>
+  </>
+)
+
+
+const documentURL =  window.location.href
+const url = documentURL.substring(documentURL.lastIndexOf('/') + 1)
+const authorString = url.substring(url.indexOf('authors') + 8)
 
 export const Query = ({ setPredictions, predictionData }) => {
   const [queryYear, setQueryYear] = useState('');
   const [queryAuthors, setQueryAuthors] = useState([]);
-  const documentURL =  useMemo(() => document.URL, [])
- 
 
   useEffect(() => {
     setPredictions([]);
-    console.log(`documentURL: ${documentURL}`);
-    const url = documentURL.substring(documentURL.lastIndexOf('/') + 1);
+
+    setQueryAuthors(authorString.split('&'));
+
     const year = url.substring(url.indexOf('year') + 5).substring(0, 4);
     setQueryYear(year);
 
-    const authorString = url.substring(url.indexOf('authors') + 8);
-    setQueryAuthors(authorString.split('&'));
+    // const authorString = url.substring(url.indexOf('authors') + 8);
+    // setQueryAuthors(authorString.split('&'));
 
     async function fetchAllAuthors(queryAuthors, setPredictions) {
       console.log(`queryAuthors received:`);

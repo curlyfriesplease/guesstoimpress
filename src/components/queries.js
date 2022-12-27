@@ -89,7 +89,7 @@ export async function fetchAllPredictionsByAuthor(queryAuthor, setPredictions) {
     );
     const predictions = predictionData.data.listPredictions.items;
     const sortedPredictionsByName = predictions.sort((a, b) =>
-      a.Author > b.Author ? -1 : 1
+      a.Year > b.Year ? -1 : 1
     );
     console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
     console.dir(predictions);
