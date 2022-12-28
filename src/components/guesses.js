@@ -42,61 +42,61 @@ const IndividualGuess = ({ guess, setPredictions }) => {
       case 'DEATH':
         return (
           <div className="category DEATH" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">person_remove</span> {cat}
+            <span className="material-icons-outlined">person_remove</span> {cat}
           </div>
         );
       case 'ECONOMY':
         return (
           <div className="category ECONOMY" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">trending_up</span> {cat}
+            <span className="material-icons-outlined">trending_up</span> {cat}
           </div>
         );
       case 'ENVIRONMENT':
         return (
           <div className="category ENVIRONMENT" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">air</span> {cat}
+            <span className="material-icons-outlined">air</span> {cat}
           </div>
         );
       case 'POLITICS':
         return (
           <div className="category POLITICS" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">sports_kabaddi</span> {cat}
+            <span className="material-icons-outlined">sports_kabaddi</span> {cat}
           </div>
         );
       case 'SPORTS':
         return (
           <div className="category SPORTS" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">sports_basketball</span> {cat}
+            <span className="material-icons-outlined">sports_basketball</span> {cat}
           </div>
         );
       case 'MEDIA':
         return (
           <div className="category MEDIA" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">tv</span> {cat}
+            <span className="material-icons-outlined">tv</span> {cat}
           </div>
         );
       case 'SCIENCE':
         return (
           <div className="category SCIENCE" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">science</span> {cat}
+            <span className="material-icons-outlined">science</span> {cat}
           </div>
         );
       case 'CELEBRITY':
         return (
           <div className="category CELEBRITY" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">photo_camera</span> {cat}
+            <span className="material-icons-outlined">photo_camera</span> {cat}
           </div>
         );
       case 'VIRUS':
         return (
           <div className="category VIRUS" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">coronavirus</span> {cat}
+            <span className="material-icons-outlined">coronavirus</span> {cat}
           </div>
         );
       default:
         return (
           <div className="category MISC" onClick={() => fetchAllPredictionsByCategory(guess.category, setPredictions)}>
-            <span class="material-icons-outlined">grade</span> {cat}
+            <span className="material-icons-outlined">grade</span> {cat}
           </div>
         );
     }

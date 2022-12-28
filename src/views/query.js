@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../App.css';
 import { fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate } from '../components/queries';
 import { ListDiv } from '../components/guesses'
@@ -13,22 +14,21 @@ export const NoQueryMessage = () => (
   </>
 )
 
-
-const documentURL =  window.location.href
-const url = documentURL.substring(documentURL.lastIndexOf('/') + 1)
-const authorString = url.substring(url.indexOf('authors') + 8)
-
 export const Query = ({ setPredictions, predictionData }) => {
-  const [queryYear, setQueryYear] = useState('');
-  const [queryAuthors, setQueryAuthors] = useState(['BONGO']);
+  const [year, setYear] = useState('');
+  const [authors, setAuthors] = useState(['BONGO']);
+
+  const location =  useLocation();
+  const pathname =  location.pathname;
+  const authorString = pathname.substring(pathname.indexOf('authors') + 8)
 
   useEffect(() => {
-    console.log('WELCOME TO USEEFFECT BABY')
-    console.log(`authorstring: ${authorString}`)
-    setQueryAuthors(authorString.split('&'));
+    const initialAuthors = authorString.split('&')
+    const queryAuthors = initialAuthors.map((i) => { return i.replace("+"," ")})
+    setAuthors(queryAuthors)
 
-    const year = url.substring(url.indexOf('year') + 5).substring(0, 4);
-    setQueryYear(year);
+    const queryYear = pathname.substring(pathname.indexOf('year') + 5).substring(0, 4);
+    setYear(queryYear);
 
     async function fetchAllAuthors(queryAuthors, setPredictions) {
       console.log(`queryAuthors received:`);
@@ -67,13 +67,13 @@ export const Query = ({ setPredictions, predictionData }) => {
     }
 
     fetchAllAuthors(queryAuthors, setPredictions);
-  }, []);
+  }, [location]);
 
   return (
     <>
       <p>
-        Filtered predictions from {queryAuthors.join(', ')} for the year{' '}
-        {queryYear}
+        Filtered predictions from {authors.join(', ')} for the year{' '}
+        {year}
       </p>
       <ListDiv predictionData={predictionData} />
     </>
