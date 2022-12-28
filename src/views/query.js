@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 import { fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate } from '../components/queries';
 import { ListDiv } from '../components/guesses'
@@ -20,18 +20,15 @@ const authorString = url.substring(url.indexOf('authors') + 8)
 
 export const Query = ({ setPredictions, predictionData }) => {
   const [queryYear, setQueryYear] = useState('');
-  const [queryAuthors, setQueryAuthors] = useState([]);
+  const [queryAuthors, setQueryAuthors] = useState(['BONGO']);
 
   useEffect(() => {
-    setPredictions([]);
-
+    console.log('WELCOME TO USEEFFECT BABY')
+    console.log(`authorstring: ${authorString}`)
     setQueryAuthors(authorString.split('&'));
 
     const year = url.substring(url.indexOf('year') + 5).substring(0, 4);
     setQueryYear(year);
-
-    // const authorString = url.substring(url.indexOf('authors') + 8);
-    // setQueryAuthors(authorString.split('&'));
 
     async function fetchAllAuthors(queryAuthors, setPredictions) {
       console.log(`queryAuthors received:`);
