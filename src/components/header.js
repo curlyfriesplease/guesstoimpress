@@ -1,11 +1,13 @@
 import { redirect, Link } from 'react-router-dom';
 import '../css/header.css';
 import { fetchAllPredictionsByYear } from './queries';
+import { useNavigate } from "react-router-dom";
 
-const handleClick = (year, setPredictions) => {
-  redirect('/error');
-  fetchAllPredictionsByYear(year, setPredictions);
-};
+
+// const handleClick = (year, setPredictions) => {
+//   redirect('/error');
+//   fetchAllPredictionsByYear(year, setPredictions);
+// };
 
 export const Header = ({ setPredictions }) => (
   <div className="headerDiv dropShadow2">
@@ -16,18 +18,20 @@ export const Header = ({ setPredictions }) => (
 
 const Title = () => <div className="title">Guess to Impress</div>;
 
-const MenuItems = ({ setPredictions }) => (
+const MenuItems = ({ setPredictions }) => {
+const { push } = useNavigate()
+return (
   <>
     <div className="menuItems">
-      <button className="menuButton">
-        <Link to="/">HOME</Link>
+      <button className="menuButton" onClick={() => push('/')}>
+        HOME
       </button>
-      <button className="menuButton">
-        <Link to="/rules">RULES</Link>
+      <button className="menuButton"onClick={() => push('/rules')}>
+        RULES
       </button>
-      <button className="menuButton">
-        <Link to="/winners">WINNERS</Link>
+      <button className="menuButton"onClick={() => push('/winners')}>
+        WINNERS
       </button>
     </div>
   </>
-);
+)};
