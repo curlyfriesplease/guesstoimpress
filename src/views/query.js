@@ -7,10 +7,11 @@ import { ListDiv } from '../components/guesses'
 export const NoQueryMessage = () => (
   <>
     <h3>Custom queries must be written in this format:</h3>
-    <h1>/query/year=2021authors=JON&ELEANOR&DAN</h1>
+    <h1>/query/year=2021authors=JON&ELEANOR&THOM+W</h1>
     <h3>1️⃣ Must start with year=XXXX</h3>
     <h3>2️⃣ Followed by authors=AAA&BBB&CCC</h3>
     <h3>3️⃣ Authors must be separated by an '&' symbol, and must be in caps</h3>
+    <h3>4️⃣ If an author has a space in their name, use a + symbol</h3>
   </>
 )
 
