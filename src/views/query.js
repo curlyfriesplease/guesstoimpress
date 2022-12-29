@@ -25,7 +25,7 @@ export const Query = ({ setPredictions, predictionData }) => {
 
   useEffect(() => {
     const initialAuthors = authorString.split('&')
-    const queryAuthors = initialAuthors.map((i) => { return i.replace("+"," ")})
+    const queryAuthors = initialAuthors.map((i) => { return i.replace("+"," ").replace("/","")})
     setAuthors(queryAuthors)
 
     const queryYear = pathname.substring(pathname.indexOf('year') + 5).substring(0, 4);
