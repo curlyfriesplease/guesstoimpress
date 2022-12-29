@@ -2,8 +2,6 @@ import React from "react";
 import "../css/rules.css";
 import "../App.css";
 import {
-  PredictionQuote,
-  ScoreLine,
   YearContainer,
 } from "../components/winners";
 
