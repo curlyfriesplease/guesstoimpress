@@ -3,7 +3,7 @@ import '../css/winners.css';
 import '../App.css';
 import { PredictionQuote, ScoreLine, YearContainer } from '../components/winners';
 
-export const Winners = (setPredictions) => (
+export const Winners = () => (
   <>
     <YearContainer year={"2022"}>
       <ScoreLine position="1" winner="TBC">
@@ -19,6 +19,9 @@ export const Winners = (setPredictions) => (
         TBC
       </ScoreLine>
       <ScoreLine position="BEST ONE-YEAR-LATE PREDICTION" winner="TBC">
+        TBC
+      </ScoreLine>
+      <ScoreLine position="WILDEST OVERALL PREDICTION SET" winner="TBC">
         TBC
       </ScoreLine>
     </YearContainer>

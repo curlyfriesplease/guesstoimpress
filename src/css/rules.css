@@ -1,0 +1,25 @@
+.annualRulesList {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    width: 90%;
+    margin: 25px 30px 25px 30px;
+}
+
+.addedRule {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(0, 109, 0);
+    margin: 5px 30px 5px 30px;
+    text-align: center;
+}
+
+.removedRule {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 900;
+    color: rgb(180, 0, 0);
+    margin: 5px 30px 5px 30px;
+    text-align: center;
+}
