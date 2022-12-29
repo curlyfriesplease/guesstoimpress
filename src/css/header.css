@@ -2,11 +2,14 @@
   margin: 30px 0 30px 0;
   width: 80vw;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
 
   background-image: linear-gradient(
@@ -23,6 +26,7 @@
   font-family: 'Manrope', sans-serif;
   font-size: 75px;
   font-weight: 1000;
+  border-radius: 70px;
 }
 
 .menuItems {
@@ -31,6 +35,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 70%;
 }
 
 .yearFilters {
@@ -47,12 +52,14 @@
   max-width: 20%;
   transition: 0.3s;
   font-family: 'Manrope', sans-serif;
-  font-weight: 800;
+  font-weight: 900;
   align-content: center;
   width: fit-content;
   vertical-align: middle;
   padding: 10px 0 10px 0;
   cursor: pointer;
+  font-size: 20px;;
+  text-decoration: none;
 }
 
 .yearFilterButton {
@@ -91,5 +98,10 @@
 
   .menuItems {
     flex-wrap: wrap;
+    width: 80%;
+  }
+
+  .menuButton {
+    font-size: 12px;;
   }
 }

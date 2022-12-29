@@ -1,0 +1,65 @@
+.yearContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+    margin: 15px 5px 15px 5px;
+    padding: 5px 0 15px 0;
+}
+
+.yearTitle {
+    font-size: 48px;
+    margin: 20px 0 20px 0;
+}
+
+.scoringLine {
+display: flex;
+flex-direction: row;
+width: 80%;
+  min-height: 80px;
+  height: auto
+}
+
+.scoreLineIcon {
+    width: 20vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+}
+
+.scoreLineText {
+    width: 100%;
+    text-align: left;
+    padding: 5px 40px 5px 20px;
+}
+
+.andTheAwardGoesTo {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.winnerName {
+    font-weight: 1000;
+    color: #005c97;
+    font-family: 'Fredoka', sans-serif;
+    display: inline;
+}
+
+.predictionQuote {
+    font-weight: 1000;
+    color: #950081;
+    font-style: italic;
+    font-family: 'Fredoka', sans-serif;
+}
+
+@media only screen and (max-width: 800px) {
+    .scoreLineIcon {
+        font-size: 50px;
+    }
+
+    .scoreLineText {
+        padding: 5px 10px 5px 10px;
+    }
+}

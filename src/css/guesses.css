@@ -1,5 +1,5 @@
 .listDiv {
-  width: 92%;
+  width: 95%;
   display: flex;
   height: auto;
   flex-direction: column;
@@ -11,7 +11,7 @@
     'cat aut tex yea sta'
     'cat aut inf yea sta';
   min-height: 45px;
-  grid-template-columns: 15% 10% 48% 10% 10%;
+  grid-template-columns: 10% 10% 55% 10% 10%;
   grid-template-rows: auto auto;
   text-align: center;
   vertical-align: middle;
@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px 5px 1px 5px;
+  padding: 1px 20px 1px 20px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -157,7 +157,7 @@
   background-image: linear-gradient(
     110.1deg,
     rgba(34, 126, 34, 1) 2.9%,
-    rgba(168, 251, 60, 1) 90.3%
+    rgba(56, 182, 69, 1) 90.3%
   );
   transition: 0.5s;
   background-size: 200% auto;
@@ -179,7 +179,7 @@
   .individualGuess {
     grid-template-areas:
       '. aut . yea .'
-      'tex tex tex tex text'
+      'tex tex tex tex tex'
       'inf inf inf inf inf'
       '. cat . sta .';
     grid-template-columns: 5% 40% 10% 40% 5%;

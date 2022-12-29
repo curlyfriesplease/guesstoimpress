@@ -19,17 +19,17 @@ export const Header = ({ setPredictions }) => (
 const Title = () => <div className="title">Guess to Impress</div>;
 
 const MenuItems = ({ setPredictions }) => {
-const { push } = useNavigate()
+const navigate = useNavigate();
 return (
   <>
     <div className="menuItems">
-      <button className="menuButton" onClick={() => push('/')}>
+      <button className="menuButton" onClick={() => navigate('/')}>
         HOME
       </button>
-      <button className="menuButton"onClick={() => push('/rules')}>
+      <button className="menuButton"onClick={() => navigate('/rules')}>
         RULES
       </button>
-      <button className="menuButton"onClick={() => push('/winners')}>
+      <button className="menuButton"onClick={() => navigate('/winners')}>
         WINNERS
       </button>
     </div>
