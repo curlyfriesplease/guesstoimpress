@@ -39,7 +39,7 @@ export const YearPage = ({ setPredictions, predictions }) => {
       )}
       {predictions.length > 250 && (
       <button className="removeIncorrectsButton" onClick={() => fetchAllPredictionsByYearWithoutIncorrects(currentYear, setPredictions)}>
-        Click to remove incorrect guesses
+        Show {currentYear} without incorrect guesses
       </button>
       )}
     </>
