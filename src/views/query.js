@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import '../App.css';
+import '../css/guesses.css'
 import { fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate } from '../components/queries';
 import { ListDiv } from '../components/guesses'
 
@@ -72,7 +73,7 @@ export const Query = ({ setPredictions, predictionData }) => {
 
   return (
     <>
-      <p>
+      <p className='filteredText'>
         Filtered predictions from {authors.join(', ')} for the year{' '}
         {year}
       </p>
