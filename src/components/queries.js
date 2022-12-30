@@ -25,6 +25,31 @@ export async function fetchAllPredictionsByYear(queryYear, setPredictions) {
   }
 }
 
+export async function fetchAllPredictionsByYearWithoutIncorrects(queryYear, setPredictions) {
+  try {
+    const predictionData = await API.graphql(
+      graphqlOperation(listPredictions, {
+        filter: {
+          Year: {
+            eq: queryYear,
+          },
+          status: {ne: "2"},
+        },
+      })
+    );
+    const predictions = predictionData.data.listPredictions.items;
+    const sortedPredictionsByName = predictions.sort((a, b) =>
+      a.Author > b.Author ? -1 : 1
+    );
+    console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
+    console.dir(predictions);
+    setPredictions(sortedPredictionsByName);
+  } catch (err) {
+    console.log('error fetching predictions:');
+    console.log(err);
+  }
+}
+
 export async function fetchAllPredictionsByStatus(queryStatus, setPredictions) {
   try {
     const predictionData = await API.graphql(

@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { ListDiv } from '../components/guesses';
-import { fetchAllPredictionsByYear } from '../components/queries';
+import { fetchAllPredictionsByYear, fetchAllPredictionsByYearWithoutIncorrects } from '../components/queries';
 import '../App.css';
 import '../css/header.css';
 
+
+
 export const YearPage = ({ setPredictions, predictions }) => {
+  const currentYear = new Date().getFullYear();
   useEffect(() => {
-    const currentYear = new Date().getFullYear();
     fetchAllPredictionsByYear(currentYear, setPredictions);
   }, []);
 
@@ -34,6 +36,11 @@ export const YearPage = ({ setPredictions, predictions }) => {
       </div>
       {predictions.length > 0 && (
         <ListDiv predictionData={predictions} setPredictions={setPredictions} />
+      )}
+      {predictions.length > 250 && (
+      <button className="removeIncorrectsButton" onClick={() => fetchAllPredictionsByYearWithoutIncorrects(currentYear, setPredictions)}>
+        Click to remove incorrect guesses
+      </button>
       )}
     </>
   );
