@@ -6,23 +6,23 @@ import { PredictionQuote, ScoreLine, YearContainer } from '../components/winners
 export const Winners = () => (
   <>
     <YearContainer year={"2022"}>
-      <ScoreLine position="1" winner="TBC">
-        TBC
+      <ScoreLine position="1" winner="PAUL D">
+        <PredictionQuote>There will be 3 prime ministers inc Boris Johnson.</PredictionQuote>
+        There was no doubt from the judges, Paul D was the clear winner with this excellent guess. I think we'd all suspected 2022 might see a new PM, but to go further and say there would be three is a great shout.
       </ScoreLine>
-      <ScoreLine position="2" winner="TBC">
-        TBC
+      <ScoreLine position="2" winner="CURTIS">
+        <PredictionQuote>The average household annual energy bill tops 2k</PredictionQuote>
+        Curtis' whole set did well, with 4 correct. But this was the standout prediction. Even before the Ukraine conflict had started, he had carefully thought forward to knock on effects for when it would begin. A logical and smart move.
       </ScoreLine>
-      <ScoreLine position="3" winner="TBC">
-        TBC
+      <ScoreLine position="3" winner="ALAN">
+        <PredictionQuote>The Tory leadership race hots up with Priti, Rishi and Liz in contention, in the end Liz Truss wins the competition and takes home a speedboat.</PredictionQuote>
+        Another UK political guess makes the top 3 - Alan's very nice guess that there would be a leadership race with Liz Truss ultimately beating Rishi. Taking home a proverbial speedboat in the form of the nuclear launch code briefcase.
       </ScoreLine>
-      <ScoreLine position="MOST CREATIVE PREDICTION" winner="TBC">
-        TBC
+      <ScoreLine position="MOST CREATIVE PREDICTION" winner="ADAM N">
+        Adam N came up with some absolutely batshit guesses, which <a href="https://predictions.jonmulhern.co.uk/query/year=2022authors=ADAM+N">can be read here.</a> Amongst them all, one came through which was genuinely impressive, regarding a high profile football pundit being sacked.
       </ScoreLine>
-      <ScoreLine position="BEST ONE-YEAR-LATE PREDICTION" winner="TBC">
-        TBC
-      </ScoreLine>
-      <ScoreLine position="WILDEST OVERALL PREDICTION SET" winner="TBC">
-        TBC
+      <ScoreLine position="WILDEST OVERALL PREDICTION SET" winner="STAS">
+        Stas spread his bets across many areas, and with only wild outcomes, which is very much in the spirit of the game. Eight guesses, all in different categories, all creative. A great set that's undeniably wild. <a href="https://predictions.jonmulhern.co.uk/query/year=2022authors=STAS">They can be read here.</a>
       </ScoreLine>
     </YearContainer>
     <YearContainer year={"2021"}>
