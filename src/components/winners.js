@@ -40,3 +40,10 @@ export const ScoreLine = ({position, winner, children}) => {
 export const PredictionQuote = ({children}) => (
     <p className="predictionQuote">"{children}"</p>
 )
+
+export const AcceptanceSpeech = ({children}) => (
+    <div className='acceptanceSpeechDiv'>
+    <h5>    They said:</h5>
+    <p className='acceptanceSpeechQuote'>"{children}"</p>
+    </div>
+)

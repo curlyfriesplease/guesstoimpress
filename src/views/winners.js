@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/winners.css';
 import '../App.css';
-import { PredictionQuote, ScoreLine, YearContainer } from '../components/winners';
+import { AcceptanceSpeech, PredictionQuote, ScoreLine, YearContainer } from '../components/winners';
 
 export const Winners = () => (
   <>
@@ -9,6 +9,7 @@ export const Winners = () => (
       <ScoreLine position="1" winner="PAUL D">
         <PredictionQuote>There will be 3 prime ministers inc Boris Johnson.</PredictionQuote>
         There was no doubt from the judges, Paul D was the clear winner with this excellent guess. I think we'd all suspected 2022 might see a new PM, but to go further and say there would be three is a great shout.
+        <AcceptanceSpeech>I'd like to thank the Tory party for an entertaining year</AcceptanceSpeech>
       </ScoreLine>
       <ScoreLine position="2" winner="CURTIS">
         <PredictionQuote>The average household annual energy bill tops 2k</PredictionQuote>
@@ -17,6 +18,7 @@ export const Winners = () => (
       <ScoreLine position="3" winner="ALAN">
         <PredictionQuote>The Tory leadership race hots up with Priti, Rishi and Liz in contention, in the end Liz Truss wins the competition and takes home a speedboat.</PredictionQuote>
         Another UK political guess makes the top 3 - Alan's very nice guess that there would be a leadership race with Liz Truss ultimately beating Rishi. Taking home a proverbial speedboat in the form of the nuclear launch code briefcase.
+        <AcceptanceSpeech>I would like to thank my agent, my teachers at school (especially my swimming coach) and most of all my wife who suggested Liz. I wish that rather than the speedboat I had mentioned the £115k a year pension- a fine reward for tanking the economy in 49 days.</AcceptanceSpeech>
       </ScoreLine>
       <ScoreLine position="MOST CREATIVE PREDICTION" winner="ADAM N">
         Adam N came up with some absolutely batshit guesses, which <a href="https://predictions.jonmulhern.co.uk/query/year=2022authors=ADAM+N">can be read here.</a> Amongst them all, one came through which was genuinely impressive, regarding a high profile football pundit being sacked.

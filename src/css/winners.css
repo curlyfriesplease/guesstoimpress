@@ -54,6 +54,25 @@ width: 80%;
     font-family: 'Fredoka', sans-serif;
 }
 
+.acceptanceSpeechDiv {
+width: 80%;
+margin-left: 15px;
+margin-right: none;
+}
+
+.acceptanceSpeechDiv, h5 {
+    margin-bottom: 5px;
+    font-style: italic;
+    color: #005c97;
+}
+
+.acceptanceSpeechQuote {
+margin-top: 2px;
+font-weight: 800;
+color: #950081;
+}
+
+
 @media only screen and (max-width: 800px) {
     .scoreLineIcon {
         font-size: 50px;

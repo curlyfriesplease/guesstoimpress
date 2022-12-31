@@ -14,7 +14,7 @@ export async function fetchAllPredictionsByYear(queryYear, setPredictions) {
     );
     const predictions = predictionData.data.listPredictions.items;
     const sortedPredictionsByName = predictions.sort((a, b) =>
-      a.Author > b.Author ? -1 : 1
+      a.Author > b.Author ? 1 : -1
     );
     console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
     console.dir(predictions);
