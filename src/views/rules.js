@@ -32,6 +32,9 @@ export const Rules = () => (
         <li>
           Prizes to be determined at the end of the year. Depends what I can afford!
         </li>
+        <li>
+          Predictions must be submitted by the end of Jan 1st
+        </li>
       </ol>
     </YearContainer>
     <YearContainer year={"2022"}>
@@ -68,6 +71,9 @@ export const Rules = () => (
         </li>
         <li>
           Prizes to be determined at the end of the year depending on whether I've saved any money or not. Probably not. So just a pint each most likely.
+        </li>
+        <li>
+          Predictions must be submitted by the end of Jan 1st
         </li>
       </ol>
     </YearContainer>
