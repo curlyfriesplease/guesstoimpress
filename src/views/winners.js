@@ -14,6 +14,7 @@ export const Winners = () => (
       <ScoreLine position="2" winner="CURTIS">
         <PredictionQuote>The average household annual energy bill tops 2k</PredictionQuote>
         Curtis' whole set did well, with 4 correct. But this was the standout prediction. Even before the Ukraine conflict had started, he had carefully thought forward to knock on effects for when it would begin. A logical and smart move.
+        <AcceptanceSpeech>How exciting</AcceptanceSpeech>
       </ScoreLine>
       <ScoreLine position="3" winner="ALAN">
         <PredictionQuote>The Tory leadership race hots up with Priti, Rishi and Liz in contention, in the end Liz Truss wins the competition and takes home a speedboat.</PredictionQuote>
