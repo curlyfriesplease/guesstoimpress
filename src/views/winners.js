@@ -22,6 +22,7 @@ export const Winners = () => (
       </ScoreLine>
       <ScoreLine position="MOST CREATIVE PREDICTION" winner="ADAM N">
         Adam N came up with some absolutely batshit guesses, which <a href="https://predictions.jonmulhern.co.uk/query/year=2022authors=ADAM+N">can be read here.</a> Amongst them all, one came through which was genuinely impressive, regarding a high profile football pundit being sacked.
+        <AcceptanceSpeech>Thank you everyone. I'd like to thank the venn diagram formed between my parents and the movies for covering most of morality. Also evolution for keeping my balls safe and warm. Also chillis. And Jon. Good night.</AcceptanceSpeech>
       </ScoreLine>
       <ScoreLine position="WILDEST OVERALL PREDICTION SET" winner="STAS">
         Stas spread his bets across many areas, and with only wild outcomes, which is very much in the spirit of the game. Eight guesses, all in different categories, all creative. A great set that's undeniably wild. <a href="https://predictions.jonmulhern.co.uk/query/year=2022authors=STAS">They can be read here.</a>
