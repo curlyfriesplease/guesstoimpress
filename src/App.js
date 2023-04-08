@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Amplify } from 'aws-amplify';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -15,6 +15,14 @@ Amplify.configure(awsExports);
 
 function App() {
   const [predictions, setPredictions] = useState([]);
+  const [filteredPredictions, setFilteredPredictions] = useState([]);
+  const [filterString, setFilterString] = useState(predictions);
+
+  useEffect(() => {
+    if (!filterString) {
+      setFilteredPredictions(predictions);
+    }
+  }, [filterString]);
 
   return (
     <BrowserRouter>
@@ -26,16 +34,26 @@ function App() {
               <YearPage
                 setPredictions={setPredictions}
                 predictions={predictions}
+                setFilteredPredictions={setFilteredPredictions}
+                filteredPredictions={filteredPredictions}
+                filterString={filterString}
+                setFilterString={setFilterString}
               />
             }
           />
           <Route path="query" exact element={<NoQueryMessage />} />
           <Route
             path="query/*"
-            element={<Query 
-              setPredictions={setPredictions} 
-              predictionData={predictions} 
-              />}
+            element={
+              <Query
+                setPredictions={setPredictions}
+                predictionData={predictions}
+                setFilteredPredictions={setFilteredPredictions}
+                filteredPredictions={filteredPredictions}
+                filterString={filterString}
+                setFilterString={setFilterString}
+              />
+            }
           />
           <Route path="rules" element={<Rules />} />
           <Route path="winners" element={<Winners />} />
