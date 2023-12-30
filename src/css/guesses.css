@@ -9,7 +9,7 @@
   display: grid;
   grid-template-areas:
     'cat aut tex yea sta'
-    'cat aut inf yea sta';
+    'cat aut tex yea sta';
   min-height: 45px;
   grid-template-columns: 10% 10% 55% 10% 10%;
   grid-template-rows: auto auto;
@@ -47,7 +47,7 @@
 
 .guessText {
   grid-area: tex;
-  display: flex;
+  display: flex-column;
   align-items: center;
   justify-content: center;
   padding: 1px 20px 1px 20px;
@@ -79,7 +79,7 @@
 }
 
 .guessInfo {
-  grid-area: inf;
+  grid-area: tex;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,7 +178,7 @@
 .removeIncorrectsButton {
   border: none;
   font-style: italic;
-  color:rgb(108, 108, 120);
+  color: rgb(108, 108, 120);
   font-family: 'Fredoka', sans-serif;
   font-size: 10px;
 }
@@ -192,7 +192,7 @@
     grid-template-areas:
       '. aut . yea .'
       'tex tex tex tex tex'
-      'inf inf inf inf inf'
+      'tex tex tex tex tex'
       '. cat . sta .';
     grid-template-columns: 5% 40% 10% 40% 5%;
     grid-template-rows: auto auto auto auto;
