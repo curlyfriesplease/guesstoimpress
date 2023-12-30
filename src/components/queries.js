@@ -25,7 +25,10 @@ export async function fetchAllPredictionsByYear(queryYear, setPredictions) {
   }
 }
 
-export async function fetchAllPredictionsByYearWithoutIncorrects(queryYear, setPredictions) {
+export async function fetchAllPredictionsByYearWithoutIncorrects(
+  queryYear,
+  setPredictions
+) {
   try {
     const predictionData = await API.graphql(
       graphqlOperation(listPredictions, {
@@ -33,7 +36,7 @@ export async function fetchAllPredictionsByYearWithoutIncorrects(queryYear, setP
           Year: {
             eq: queryYear,
           },
-          status: {ne: "2"},
+          status: { ne: '2' },
         },
       })
     );
@@ -130,16 +133,21 @@ export async function fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate(
   queryYear
 ) {
   try {
+    let filter = {
+      Author: {
+        eq: queryAuthor,
+      },
+    };
+
+    if (queryYear && queryYear.toString().startsWith('2')) {
+      filter.Year = {
+        eq: queryYear,
+      };
+    }
+
     const predictionData = await API.graphql(
       graphqlOperation(listPredictions, {
-        filter: {
-          Year: {
-            eq: queryYear,
-          },
-          Author: {
-            eq: queryAuthor,
-          },
-        },
+        filter: filter,
       })
     );
     const predictions = predictionData.data.listPredictions.items;

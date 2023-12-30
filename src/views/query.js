@@ -26,6 +26,9 @@ export const Query = ({
 }) => {
   const [year, setYear] = useState('');
   const [authors, setAuthors] = useState(['BONGO']);
+  const yearText = year.toString().startsWith('2')
+    ? `the year ${year}`
+    : 'all years';
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -81,12 +84,12 @@ export const Query = ({
     }
 
     fetchAllAuthors(queryAuthors, setPredictions);
-  }, [location]);
+  }, [location, authorString, pathname, setPredictions]);
 
   return (
     <>
       <p className="filteredText">
-        Filtered predictions from {authors.join(', ')} for the year {year}
+        Filtered predictions from {authors.join(', ')} for {yearText}
       </p>
       <ListDiv predictionData={predictionData} />
     </>
