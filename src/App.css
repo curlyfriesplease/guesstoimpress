@@ -35,15 +35,15 @@
 }
 
 .dropShadow2 {
-  -moz-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+  -moz-box-shadow: inset -8px -8px 8px 0 rgba(25, 25, 233, 0.096),
     inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
-  -webkit-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
-    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
-  box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
-    inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+    8px 8px 24px 0 rgba(41, 14, 10, 0.774);
+  -webkit-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.11),
+    inset 8px 8px 8px 0 #d5d9eb31, -8px -8px 24px 0 #fff,
+    8px 8px 24px 0 rgba(32, 10, 10, 0.829);
+  box-shadow: inset -8px -8px 8px 0 rgba(6, 6, 252, 0.096),
+    inset 8px 8px 8px 0 #e6e8f028, -8px -8px 24px 0 #d8dce454,
+    8px 8px 24px 0 rgba(25, 25, 53, 0.274);
   border-radius: 30px;
 }
 
