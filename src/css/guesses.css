@@ -177,10 +177,11 @@
 
 .removeIncorrectsButton {
   border: none;
-  font-style: italic;
   color: rgb(108, 108, 120);
   font-family: 'Fredoka', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
+  padding: 6px 20px 6px 20px;
+  margin: 5px 0;
 }
 
 .filteredText {

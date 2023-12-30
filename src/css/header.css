@@ -23,11 +23,12 @@
   /* --color-two: hsl(40 95% 55%); */
   --color-two: #f606ee;
   background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -43,8 +44,18 @@
   width: 70%;
 }
 
-.yearFilters {
+.allFilters {
   margin: 10px 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 10px 20px 20px 20px;
+}
+
+.yearFilters {
+  margin: 10px 0 10px 0;
   width: 320px;
   display: flex;
   justify-content: space-around;
@@ -63,7 +74,7 @@
   vertical-align: middle;
   padding: 10px 0 10px 0;
   cursor: pointer;
-  font-size: 20px;;
+  font-size: 20px;
   text-decoration: none;
 }
 
@@ -107,7 +118,7 @@
   }
 
   .menuButton {
-    font-size: 12px;;
+    font-size: 12px;
   }
 }
 

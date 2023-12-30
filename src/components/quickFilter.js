@@ -27,7 +27,7 @@ export const QuickFilter = ({
   }, [filterString]);
 
   return (
-    <div className="quickFilterContainer dropShadow2">
+    <div className="quickFilterContainer">
       <span className="material-icons-outlined">filter_list</span>
       <input
         value={filterString}

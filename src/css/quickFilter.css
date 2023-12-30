@@ -1,11 +1,14 @@
 .quickFilterContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+  width: 320px;
+  display: flex;
 }
 
 .quickFilterInput {
+  width: 60%;
   margin-left: 8px;
   border-radius: 50px;
   border-radius: 10px;

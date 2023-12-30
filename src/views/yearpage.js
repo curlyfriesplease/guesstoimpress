@@ -24,34 +24,50 @@ export const YearPage = ({
 
   return (
     <>
-      {!filterString?.length > 0 && (
-        <div className="yearFilters dropShadow2">
+      <div className="allFilters dropShadow2">
+        {!filterString?.length > 0 && (
+          <div className="yearFilters">
+            <button
+              className="yearFilterButton dropShadow2"
+              onClick={() => fetchAllPredictionsByYear('2023', setPredictions)}
+            >
+              2023
+            </button>
+            <button
+              className="yearFilterButton dropShadow2"
+              onClick={() => fetchAllPredictionsByYear('2022', setPredictions)}
+            >
+              2022
+            </button>
+            <button
+              className="yearFilterButton dropShadow2"
+              onClick={() => fetchAllPredictionsByYear('2021', setPredictions)}
+            >
+              2021
+            </button>
+          </div>
+        )}
+        <QuickFilter
+          predictions={predictions}
+          setFilteredPredictionData={setFilteredPredictions}
+          filterString={filterString}
+          setFilterString={setFilterString}
+        />
+        {predictions.length > 250 && (
           <button
-            className="yearFilterButton"
-            onClick={() => fetchAllPredictionsByYear('2023', setPredictions)}
+            className="removeIncorrectsButton dropShadow2"
+            onClick={() =>
+              fetchAllPredictionsByYearWithoutIncorrects(
+                currentYear,
+                setPredictions
+              )
+            }
           >
-            2023
+            Hide incorrect guesses
           </button>
-          <button
-            className="yearFilterButton"
-            onClick={() => fetchAllPredictionsByYear('2022', setPredictions)}
-          >
-            2022
-          </button>
-          <button
-            className="yearFilterButton"
-            onClick={() => fetchAllPredictionsByYear('2021', setPredictions)}
-          >
-            2021
-          </button>
-        </div>
-      )}
-      <QuickFilter
-        predictions={predictions}
-        setFilteredPredictionData={setFilteredPredictions}
-        filterString={filterString}
-        setFilterString={setFilterString}
-      />
+        )}
+      </div>
+
       {predictions.length > 0 && (
         <ListDiv
           predictionData={
@@ -59,19 +75,6 @@ export const YearPage = ({
           }
           setPredictions={setPredictions}
         />
-      )}
-      {predictions.length > 250 && (
-        <button
-          className="removeIncorrectsButton"
-          onClick={() =>
-            fetchAllPredictionsByYearWithoutIncorrects(
-              currentYear,
-              setPredictions
-            )
-          }
-        >
-          Show {currentYear} without incorrect guesses
-        </button>
       )}
     </>
   );
