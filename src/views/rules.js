@@ -16,6 +16,9 @@ export const Rules = () => (
       <p className="addedRule">
         Added: No celeb death guesses for anyone known to be ill
       </p>
+      <p className="addedRule">
+        Added: Celeb death max age lowered from 85 to 80
+      </p>
       <p className="removedRule">
         Removed: Political guess no longer essential
       </p>
@@ -24,21 +27,23 @@ export const Rules = () => (
           Up to <u>eight</u> predictions in total
         </li>
         <li>
-          No boring as shit guesses. A non-player, the Boringness Ombusman, will
-          be chosen and asked to read through all guesses at the start of the
-          year. Anything deemed to be dull will be removed
+          No boring as shit guesses. A non-player, the Boringness Ombudsman,
+          will be chosen and asked to read through all guesses at the start of
+          the year. Anything deemed to be dull will be removed. Get outta my
+          sight
         </li>
-        <li>Any celebrity deaths must be aged under 85 when the year begins</li>
+        <li>Any celebrity deaths must be aged under 80 when the year begins</li>
         <li>Any celebrity deaths must not be for anyone known to be ill</li>
         <li>
           No predictions within your control, e.g. "I will run a marathon this
           year"
         </li>
-        <li>Wildest set of predictions will win a prize</li>
         <li>
           Most impressive individual prediction, that is at least partly
           correct, wins a prize
         </li>
+        <li>Wildest set of predictions will win a prize</li>
+        <li>Most creative set of predictions will win a prize</li>
         <li>
           Prizes: Best individual prediction wins 3 books, chosen by the
           previous year's winners. Wildest set of predictions, and most
@@ -64,6 +69,7 @@ export const Rules = () => (
           year"
         </li>
         <li>Wildest set of predictions will win a prize</li>
+        <li>Most creative set of predictions will win a prize</li>
         <li>
           Most impressive individual prediction, that is at least partly
           correct, wins a prize
@@ -107,6 +113,7 @@ export const Rules = () => (
           year"
         </li>
         <li>Wildest set of predictions will win a prize</li>
+        <li>Most creative set of predictions will win a prize</li>
         <li>
           Most impressive individual prediction, that is at least partly
           correct, wins a prize
