@@ -33,9 +33,9 @@ export const Winners = () => (
         <br />
         Book 3 TBC
         <AcceptanceSpeech>
-          Thanks to everyone for offering such support through the year. I'm
-          really pleased that volcano devastated a nation and allowed for this
-          victory
+          Just want to thank everyone who believed in me, the people of Hastings
+          for dragging that poor dolphin ashore but most of all Jon “Mullington”
+          Mulhern for inviting me to play his game
         </AcceptanceSpeech>
       </ScoreLine>
       <ScoreLine position="2" winner="BRENDAN">
