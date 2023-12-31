@@ -90,6 +90,10 @@ export const Winners = () => (
         </a>
         , well done Dave for embracing the true spirit of the game. You win a
         well earned pint.
+        <AcceptanceSpeech>
+          Some would call me a hero for these predictions. Not the hero we need
+          certainly, but possibly the hero we deserve.
+        </AcceptanceSpeech>
       </ScoreLine>
     </YearContainer>
     <YearContainer year={'2022'}>
