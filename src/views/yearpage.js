@@ -59,7 +59,7 @@ export const YearPage = ({
           filterString={filterString}
           setFilterString={setFilterString}
         />
-        {predictions.length > 250 && (
+        {predictions.length > 150 && (
           <button
             className="removeIncorrectsButton dropShadow2"
             onClick={() =>
