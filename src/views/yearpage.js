@@ -29,6 +29,12 @@ export const YearPage = ({
           <div className="yearFilters">
             <button
               className="yearFilterButton dropShadow2"
+              onClick={() => fetchAllPredictionsByYear('2024', setPredictions)}
+            >
+              2024
+            </button>
+            <button
+              className="yearFilterButton dropShadow2"
               onClick={() => fetchAllPredictionsByYear('2023', setPredictions)}
             >
               2023
