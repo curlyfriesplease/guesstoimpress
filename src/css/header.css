@@ -106,6 +106,13 @@
   border-radius: 30px;
 }
 
+.guessesTotalCount {
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  padding-top: 3px;
+}
+
 @media only screen and (max-width: 800px) {
   .title {
     font-size: 45px;

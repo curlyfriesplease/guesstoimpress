@@ -72,6 +72,12 @@ export const YearPage = ({
             Hide incorrect guesses
           </button>
         )}
+        <div id="guessesTotalCount" className="guessesTotalCount">
+          Total:{' '}
+          {filterString.length > 0
+            ? filteredPredictions.length
+            : predictions.length}
+        </div>
       </div>
 
       {predictions.length > 0 && (

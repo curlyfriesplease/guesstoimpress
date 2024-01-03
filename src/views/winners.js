@@ -29,7 +29,9 @@ export const Winners = () => (
           Era, by James Barrat
         </a>
         <br />
-        Book 2 TBC
+        <a href="https://www.amazon.co.uk/Watchmen-Alan-Moore/dp/1852860243">
+          Watchmen, by Alan Moore
+        </a>
         <br />
         Book 3 TBC
         <AcceptanceSpeech>
