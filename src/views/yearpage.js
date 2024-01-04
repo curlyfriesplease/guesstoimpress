@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { ListDiv } from '../components/guesses';
 import {
-  fetchAllPredictionsAndIMeanAllOfThem,
   fetchAllPredictionsByYear,
   fetchAllPredictionsByYearWithoutIncorrects,
 } from '../components/queries';
