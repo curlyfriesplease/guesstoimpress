@@ -24,16 +24,22 @@ export const Winners = () => (
         judges. Cracking guess! Greg wins 3 books, selected by last year's 3
         winners:
         <br />
+        <a href="https://www.amazon.co.uk/Hundred-Year-Old-Man-Climbed-Window-Disappeared/dp/0349141800">
+          The Hundred-Year-Old Man Who Climbed Out of the Window and
+          Disappeared, by Jonas Jonasson
+        </a>
+        , chosen by last year's 1st place Paul D
+        <br />
         <a href="https://www.amazon.co.uk/Our-Final-Invention-Artificial-Intelligence/dp/0312622376">
           Our Final Invention: Artificial Intelligence and the End of the Human
           Era, by James Barrat
         </a>
+        , chosen by last year's 2nd place Dan C
         <br />
         <a href="https://www.amazon.co.uk/Watchmen-Alan-Moore/dp/1852860243">
           Watchmen, by Alan Moore
         </a>
-        <br />
-        Book 3 TBC
+        , chosen by last year's 3rd place Alan
         <AcceptanceSpeech>
           Just want to thank everyone who believed in me, the people of Hastings
           for dragging that poor dolphin ashore but most of all Jon “Mullington”
@@ -108,18 +114,21 @@ export const Winners = () => (
         PM, but to go further and say there would be three is a great shout.
         Paul wins three books selected by last year's three winners:
         <br />
-        <a href="https://www.amazon.co.uk/Flavour-Thesaurus-Niki-Segnit/dp/0747599777">
-          The Flavour Thesaurus, by Niki Segnit
-        </a>
-        <br />
         <a href="https://www.amazon.co.uk/Long-Way-Down-Nick-Hornby/dp/1594481938">
           A Long Way Down, by Nick Hornby
         </a>
+        , chosen by last year's 1st place Cheryll
+        <br />
+        <a href="https://www.amazon.co.uk/Flavour-Thesaurus-Niki-Segnit/dp/0747599777">
+          The Flavour Thesaurus, by Niki Segnit
+        </a>
+        , chosen by last year's 2nd place Thom
         <br />
         <a href="https://www.amazon.co.uk/Etymologicon-Circular-through-Connections-Language/dp/1848313071">
           The Etymologicon: A Circular Stroll through the Hidden Connections of
           the English Language, by Mark Forsyth
         </a>
+        , chosen by last year's 3rd place Dan S
         <AcceptanceSpeech>
           I'd like to thank the Tory party for an entertaining year
         </AcceptanceSpeech>
@@ -206,7 +215,7 @@ export const Winners = () => (
         Sure enough Lad Baby were no.1 again, and Boris Johnson may have stayed
         but he certainly came damn close to getting ousted.
       </ScoreLine>
-      <ScoreLine position="3" winner="DAN">
+      <ScoreLine position="3" winner="DAN S">
         <PredictionQuote>Trump starts his own TV network</PredictionQuote>
         Dan secured third place mainly because of his prediction about Trump
         starting a TV network. While it may not have been a TV network, he did

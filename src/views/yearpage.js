@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { ListDiv } from '../components/guesses';
 import {
+  fetchAllPredictionsAndIMeanAllOfThem,
   fetchAllPredictionsByYear,
   fetchAllPredictionsByYearWithoutIncorrects,
 } from '../components/queries';
@@ -51,6 +52,14 @@ export const YearPage = ({
             >
               2021
             </button>
+            {/* <button
+              className="yearFilterButton dropShadow2"
+              onClick={() =>
+                fetchAllPredictionsAndIMeanAllOfThem(setPredictions)
+              }
+            >
+              ALL
+            </button> */}
           </div>
         )}
         <QuickFilter
@@ -59,6 +68,24 @@ export const YearPage = ({
           filterString={filterString}
           setFilterString={setFilterString}
         />
+
+        <span>
+          <div id="guessesTotalCount" className="guessesTotalCount">
+            Guesses:{' '}
+            {filterString.length > 0
+              ? filteredPredictions.length
+              : predictions.length}
+          </div>
+          <div id="playersTotalCount" className="guessesTotalCount">
+            Players:{' '}
+            {filterString.length > 0
+              ? // number of unique authors within filteredPredictions
+                new Set(filteredPredictions.map((p) => p.Author)).size
+              : // number of unique authors within predictions
+                new Set(predictions.map((p) => p.Author)).size}
+          </div>
+        </span>
+
         {predictions.length > 150 && (
           <button
             className="removeIncorrectsButton dropShadow2"
@@ -72,12 +99,6 @@ export const YearPage = ({
             Hide incorrect guesses
           </button>
         )}
-        <div id="guessesTotalCount" className="guessesTotalCount">
-          Total:{' '}
-          {filterString.length > 0
-            ? filteredPredictions.length
-            : predictions.length}
-        </div>
       </div>
 
       {predictions.length > 0 && (

@@ -159,3 +159,26 @@ export async function fetchAllPredictionsByAuthorAnddYearWithoutStateUpdate(
     console.log(err);
   }
 }
+
+
+export async function fetchAllPredictionsAndIMeanAllOfThem(setPredictions) {
+  try {
+    const predictionData = await API.graphql(
+      graphqlOperation(listPredictions, {
+        filter: {
+       
+        },
+      })
+    );
+    const predictions = predictionData.data.listPredictions.items;
+    const sortedPredictionsByName = predictions.sort((a, b) =>
+      a.Year > b.Year ? -1 : 1
+    );
+    console.log(`🔮🔮🔮 predictions: 🔮🔮🔮`);
+    console.dir(predictions);
+    setPredictions(sortedPredictionsByName);
+  } catch (err) {
+    console.log('error fetching predictions:');
+    console.log(err);
+  }
+}
