@@ -16,7 +16,8 @@ export const YearPage = ({
   filterString,
   setFilterString,
 }) => {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
+  const currentYear = '2024'; // TODO: If the game is resumed post 2025, change this back to new Date().getFullYear()
 
   useEffect(() => {
     fetchAllPredictionsByYear(currentYear, setPredictions);
