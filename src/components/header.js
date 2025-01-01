@@ -5,6 +5,9 @@ export const Header = ({ setPredictions }) => (
   <div className="headerDiv dropShadow2">
     <Title />
     <MenuItems setPredictions={setPredictions} />
+    <div className="gameSuspendedNotice">
+      Thanks for playing 2020-2024. No game in 2025 but it'll be back!
+    </div>
   </div>
 );
 
