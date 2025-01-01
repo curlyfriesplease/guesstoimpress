@@ -15,12 +15,14 @@ export const YearPage = ({
   filteredPredictions,
   filterString,
   setFilterString,
+  selectedYear,
+  setSelectedYear,
 }) => {
   // const currentYear = new Date().getFullYear();
   const currentYear = '2024'; // TODO: If the game is resumed post 2025, change this back to new Date().getFullYear()
 
   useEffect(() => {
-    fetchAllPredictionsByYear(currentYear, setPredictions);
+    fetchAllPredictionsByYear(selectedYear, setPredictions);
   }, []);
 
   return (
@@ -29,26 +31,46 @@ export const YearPage = ({
         {!filterString?.length > 0 && (
           <div className="yearFilters">
             <button
-              className="yearFilterButton dropShadow2"
-              onClick={() => fetchAllPredictionsByYear('2024', setPredictions)}
+              className={`yearFilterButton dropShadow2 ${
+                selectedYear === '2024' ? 'yearFilterButtonSelectedYear' : ''
+              }`}
+              onClick={() => {
+                setSelectedYear('2024');
+                fetchAllPredictionsByYear('2024', setPredictions);
+              }}
             >
               2024
             </button>
             <button
-              className="yearFilterButton dropShadow2"
-              onClick={() => fetchAllPredictionsByYear('2023', setPredictions)}
+              className={`yearFilterButton dropShadow2 ${
+                selectedYear === '2023' ? 'yearFilterButtonSelectedYear' : ''
+              }`}
+              onClick={() => {
+                setSelectedYear('2023');
+                fetchAllPredictionsByYear('2023', setPredictions);
+              }}
             >
               2023
             </button>
             <button
-              className="yearFilterButton dropShadow2"
-              onClick={() => fetchAllPredictionsByYear('2022', setPredictions)}
+              className={`yearFilterButton dropShadow2 ${
+                selectedYear === '2022' ? 'yearFilterButtonSelectedYear' : ''
+              }`}
+              onClick={() => {
+                setSelectedYear('2022');
+                fetchAllPredictionsByYear('2022', setPredictions);
+              }}
             >
               2022
             </button>
             <button
-              className="yearFilterButton dropShadow2"
-              onClick={() => fetchAllPredictionsByYear('2021', setPredictions)}
+              className={`yearFilterButton dropShadow2 ${
+                selectedYear === '2021' ? 'yearFilterButtonSelectedYear' : ''
+              }`}
+              onClick={() => {
+                setSelectedYear('2021');
+                fetchAllPredictionsByYear('2021', setPredictions);
+              }}
             >
               2021
             </button>
@@ -91,7 +113,7 @@ export const YearPage = ({
             className="removeIncorrectsButton dropShadow2"
             onClick={() =>
               fetchAllPredictionsByYearWithoutIncorrects(
-                currentYear,
+                selectedYear,
                 setPredictions
               )
             }

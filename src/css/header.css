@@ -92,6 +92,11 @@
   background-color: transparent;
 }
 
+.yearFilterButtonSelectedYear {
+  background-color: #0799ee;
+  color: white;
+}
+
 .menuButton:hover {
   box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
     inset 8px 8px 8px 0 #fff, -8px -8px 24px 0 #fff,

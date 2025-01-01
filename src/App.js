@@ -17,6 +17,7 @@ function App() {
   const [predictions, setPredictions] = useState([]);
   const [filteredPredictions, setFilteredPredictions] = useState([]);
   const [filterString, setFilterString] = useState(predictions);
+  const [selectedYear, setSelectedYear] = useState('2024');
 
   useEffect(() => {
     if (!filterString) {
@@ -38,6 +39,8 @@ function App() {
                 filteredPredictions={filteredPredictions}
                 filterString={filterString}
                 setFilterString={setFilterString}
+                selectedYear={selectedYear}
+                setSelectedYear={setSelectedYear}
               />
             }
           />
