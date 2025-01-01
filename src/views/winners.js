@@ -10,6 +10,9 @@ import {
 
 export const Winners = () => (
   <>
+    <YearContainer year={'2024'}>
+      <p>Winners for 2024 TBC</p>
+    </YearContainer>
     <YearContainer year={'2023'}>
       <ScoreLine position="1" winner="GREG">
         <PredictionQuote>
