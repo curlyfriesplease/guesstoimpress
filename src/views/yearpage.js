@@ -21,7 +21,7 @@ export const YearPage = ({
 
   useEffect(() => {
     fetchAllPredictionsByYear(currentYear, setPredictions);
-  });
+  }, []);
 
   return (
     <>
